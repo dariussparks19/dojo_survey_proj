@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/info" method="POST">
+        {% csrf_token %}
+        <p>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="">
+        </p>
+        <p>
+            <label for="location">Dojo Location</label>
+            <select name="location" id="">
+                <option value="San Jose">San Jose, CA</option>
+                <option value="location">Los Angeles, CA</option>
+                <option value='location'>Oakland, CA</option>
+                <option value="location">Orange County, CA</option>
+            </select>
+        </p>
+        <p>
+            <label for="language">Favorite Language</label>
+            <select name="language" id="">
+                <option value="C#">.NET/C#</option>
+                <option value="Ruby on Rails">Ruby on Rails</option>
+                <option value="Python">Python</option>
+                <option value="MEAN">MEAN</option>
+                <option value="Java">Java</option>
+            </select>
+        </p>
+        <p>
+            <label for="comment">Comment (Optional)</label>
+        </p>
+        <textarea name="comment" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Button</button>
+    </form>
+</body>
+</html>
